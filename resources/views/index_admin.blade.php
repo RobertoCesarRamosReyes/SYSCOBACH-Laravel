@@ -59,6 +59,37 @@
 
     </section>
     <section>
-        Hola mundo
+        <p>Este sistema esta siendo construido para la biblioteca del colegio de bachilleres plantel 27 en Bajos del Ejido Gro.
+          Por el momento están terminadas las funciones siguientes:
+        </p>
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+              <ul class="list-group">
+                <li class="list-group-item active">FUNCIONES</li>
+                <li class="list-group-item">Agregar nuevo alumno</li>
+                <li class="list-group-item">Modificar alumno</li>
+                <li class="list-group-item">Eliminar alumno</li>
+                <li class="list-group-item">Agregar categoria</li>
+                <li class="list-group-item">Modificar categoria</li>
+                <li class="list-group-item">Eliminar categoría</li>
+                <li class="list-group-item">Agregar materia</li>
+                <li class="list-group-item">Modificar materia</li>
+                <li class="list-group-item">Eliminar materia</li>
+                <li class="list-group-item">Agregar ubicación</li>
+                <li class="list-group-item">Modificar ubicación</li>
+                <li class="list-group-item">Eliminar ubicación</li>
+                <li class="list-group-item">Agregar libro</li>
+                <li class="list-group-item">Modificar libro</li>
+                <li class="list-group-item">Eliminar libro</li>
+              </ul>
+            </div>
+            <div class="col-md-4"></div>
+          </div>
+          
+        </div>
+
     </section>
 @endsection

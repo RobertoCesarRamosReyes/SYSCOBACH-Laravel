@@ -16,14 +16,22 @@ class LibroController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $materias=App\Materia::all();
         $libros= App\Libro::all();
         $categorias=App\Categoria::all();
         $ubicaciones=App\Area::all();
+        if($request->get('libro')==null){
+            $libros=App\Libro::paginate(10);
+            return view('../admin/libros',compact('libros','materias','categorias','ubicaciones'));
+        }else{
+            $busqueda_libro=$request->get('libro');
+            $libros_encontrados=App\Libro::where('libro','like',"%$busqueda_libro%")->paginate(10);
+            return view('../admin/libros',compact('libros','materias','categorias','ubicaciones','libros_encontrados'));
+        }
 
-        return view('../admin/libros',compact('libros','materias','categorias','ubicaciones'));
+        //return view('../admin/libros',compact('libros','materias','categorias','ubicaciones'));
     }
 
     /**

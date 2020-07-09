@@ -41,7 +41,47 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-              
+              <div class="col-md-12">
+                <table class="table table-responsive table-hover">
+                    <thead>
+                        <th>No.</th>
+                        <th>Materia</th>
+                        <th>Categoria</th>
+                        <th>Ubicación</th>
+                        <th>Nombre</th>
+                        <th>Autor</th>
+                        <th>Editorial</th>
+                        <th>Año</th>
+                        <th>Descripcion</th>
+                        <th>Estado</th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        @php
+                        $no=1;
+                        @endphp
+                        @foreach ($libros as $lb)
+                            <tr>
+                            <td>{{$no++}}</td>
+                                <td>{{$lb->materia_id}}</td>
+                                <td>{{$lb->categoria_id}}</td>
+                                <td>{{$lb->area_id}}</td>
+                                <td>{{$lb->libro}}</td>
+                                <td>{{$lb->autor}}</td>
+                                <td>{{$lb->editorial}}</td>
+                                <td>{{$lb->anio}}</td>
+                                <td>{{$lb->descripcion}}</td>
+                                <td>{{$lb->estado}}</td>
+                                <td>
+                                    <a href=" {{route('editar_alumno',$lb->id)}} " class="btn btn-warning">Actualizar</a>
+                                    <a href=" {{route('eliminar_alumno',$lb->id)}} " onclick="return confirm('¿Está seguro de eliminar a este alumno?')" class="btn btn-danger">Eliminar</a>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+                {{$libros->links()}}
+            </div>
             </div>
            
         </div>
@@ -78,6 +118,7 @@
             <div class="form-group">
               <label for="categoria">Categoría</label>
               <select name="categoria" id="categoria" class="form-control">
+                
                   @foreach ($categorias as $categoria)
                   <option value="{{$categoria->id}}">{{$categoria->nombre}}</option> 
                   @endforeach                  

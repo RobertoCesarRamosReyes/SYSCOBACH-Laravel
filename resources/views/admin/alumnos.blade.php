@@ -60,8 +60,8 @@
                                 <td>{{$alumno->estado}}</td>
                                 <td>{{$alumno->created_at}}</td>
                                 <td>
-                                    <a href=" {{route('editar_alumno',$alumno->id)}} " class="btn btn-warning">Actualizar</a>
-                                    <a href=" {{route('eliminar_alumno',$alumno->id)}} " onclick="return confirm('¿Está seguro de eliminar a este alumno?')" class="btn btn-danger">Eliminar</a>
+                                   <!-- <a href=" {{route('editar_alumno',$alumno->id)}} " class="btn btn-warning">Actualizar</a>-->
+                                   <!-- <a href=" {{route('eliminar_alumno',$alumno->id)}} " onclick="return confirm('¿Está seguro de eliminar a este alumno?')" class="btn btn-danger">Eliminar</a>-->
                                 </td>
                             </tr>
                         @endforeach
